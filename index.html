@@ -2,90 +2,171 @@
 <html>
 <head>
 	<title>star track</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div class="container">
-	<div id = "fighter"  class="characters">
-		<p>Dino</p>
-		<img src="assets/images/dinosaur.jpg" class="dino">
-		<p></p>
-		</div>
-	<div id = "fighter" class="characters1">
-			<p>Lukeskywalker</p>
-			<img src="assets/images/luke.jpg" class="dino">
-			<p class="score"></p>
-		</div>
-	<div id = "fighter"  class="characters2">
-		<p>Monkey</p>
-		<img src="assets/images/monkey.jpg" class="dino">
-		<p class="score"></p>
-	</div>
-	<div id = "fighter"  class="characters3">
-		<p>Machine</p>
-		<img src="assets/images/machine.jpg" class="dino">
-		<p class="score"></p>
-		
-	</div>
+
+<div class="container m-5">
+  <div class="row mb-5">
+  	
+  	<div class="col-sm-2">
+  		
+  		
+  		<div class="card characters border-success text-white" style="width: 10rem; ">
+	<img class="card-img-top" src="assets/images/dinosaur.jpg" alt="Card image cap"  width="100" height="100">
+   			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Dinausor</h6>
 </div>
-
-<!--Enemy List-->
-<div class="container2">
-	<div id = "fighter2"  class="echaracters">
-		<p>Dino</p>
-		<img src="assets/images/dinosaur.jpg" class="dino">
-		<p></p>
-	</div>
-
-	<div id = "fighter2" class="echaracters1">
-			<p>Lukeskywalker</p>
-			<img src="assets/images/luke.jpg" class="dino">
-			<p class="score"></p>
-		</div>
-	<div id = "fighter2"  class="echaracters2">
-		<p>Monkey</p>
-		<img src="assets/images/monkey.jpg" class="dino">
-		<p class="score"></p>
-	</div>
-	<div id = "fighter2"  class="echaracters3">
-		<p>Machine</p>
-		<img src="assets/images/machine.jpg" class="dino">
-		<p class="score"></p>
-		
-	</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    	
 </div>
-<!-- choosen Enemy List-->
-<div class="container3">
-	<div id = "fighter3"  class="cecharacters">
-		<p>Dino</p>
-		<img src="assets/images/dinosaur.jpg" class="dino">
-		<p></p>
-	</div>
-
-	<div id = "fighter3" class="cecharacters1">
-			<p>Lukeskywalker</p>
-			<img src="assets/images/luke.jpg" class="dino">
-			<p class="score"></p>
-		</div>
-	<div id = "fighter3"  class="cecharacters2">
-		<p>Monkey</p>
-		<img src="assets/images/monkey.jpg" class="dino">
-		<p class="score"></p>
-	</div>
-	<div id = "fighter3"  class="cecharacters3">
-		<p>Machine</p>
-		<img src="assets/images/machine.jpg" class="dino">
-		<p class="score"></p>
-		
-	</div>
 </div>
+<div class="col-sm-2">
+<div class="card characters1 border-success " style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/luke.jpg"  width="100" height="100">
+  	  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Luke</h6>
+</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    	
+</div>
+</div>
+<div class="col-sm-2">
+<div class="card characters2 border-success text-white" style="width: 10rem;">
+ 	 		<img class="card-img" src="assets/images/monkey.jpg" alt="Card image cap"  width="100" height="100">
+  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Monkey</h6>
+</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    		
+    		
+    		
+  </div>
 
+</div>
+<div class="col-sm-2">
+<div class="card characters3 border-success text-white border-5" style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/machine.jpg" alt="Card image cap"  width="100" height="100">
+    			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Machine</h6>
+</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    	
+</div>
+  </div>
+  <div class="col-sm-4 text-white"><h1> <span class="badge badge-secondary">Star Wars RPG</span></h1><p class = "select">choose a fighter</p>
+  </div>
+</div>
+ <div class="row mb-5">
+  	<div class="col-sm-2">
+  		<div class="card selectdefender border-danger text-white" style="width: 10rem; ">
+	<img class="card-img-top" src="assets/images/dinosaur.jpg" alt="Card image cap"  width="100" height="100">
+   			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Dinausor</h6>
+</div>
+    	
+</div>
+</div>
+<div class="col-sm-2">
+<div class="card selectdefender1 border-danger " style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/luke.jpg"  width="100" height="100">
+  	  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Luke</h6>
+</div>
+    	
+</div>
+</div>
+<div class="col-sm-2">
+<div class="card selectdefender2 border-danger text-white" style="width: 10rem;">
+ 	 		<img class="card-img" src="assets/images/monkey.jpg" alt="Card image cap"  width="100" height="100">
+  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Monkey</h6>
+</div>
+    		
+    		
+    		
+  </div>
 
-	<div id=defender></div>
+</div>
+<div class="col-sm-2">
+<div class="card selectdefender3 border-danger text-white border-5" style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/machine.jpg" alt="Card image cap"  width="100" height="100">
+    			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Machine</h6>
+</div>
+    	
+</div>
+  </div>
+  <div class="col-sm-2">col-4
+  </div>
+</div>
+ <div class="row">
+  	<div class="col-sm-2">
+  		<div class="card defender border-warning text-white" style="width: 10rem; ">
+	<img class="card-img-top" src="assets/images/dinosaur.jpg" alt="Card image cap"  width="100" height="100">
+   			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Dinausor</h6>
+</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    	
+</div>
+</div>
+<div class="col-sm-2">
+<div class="card defender1 border-warning " style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/luke.jpg"  width="100" height="100">
+  	  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Luke</h6>
+  			 </div>
+  			 <div class="card-body text-muted">
+  			 	 </div>
 
+</div>
+</div>
+<div class="col-sm-2">
+<div class="card defender2 border-warning text-white" style="width: 10rem;">
+ 	 		<img class="card-img" src="assets/images/monkey.jpg" alt="Card image cap"  width="100" height="100">
+  			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Monkey</h6>
+  			 </div>
+  			 	 <div class="card-body text-muted">
+  			 	 </div>
+	
+    		
+    		
+  </div>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</div>
+<div class="col-sm-2">
+<div class="card defender3 border-warning text-white border-5" style="width: 10rem; ">
+ 	 		<img class="card-img-top" src="assets/images/machine.jpg" alt="Card image cap"  width="100" height="100">
+    			 <div class="card-img-overlay">
+  			 	<h6 class="card-title">Machine</h6>
+</div>
+<div class="card-body text-muted">
+  			 	 </div>
+    	
+</div>
+  </div>
+  <div class="col-sm-2">col-4
+  </div>
+</div>
+ <div class="row mt-5">
+ 	<div class="col-12 col-md-8 justify-content-end"><div class="alert alert-warning" role="alert">
+  This is a warning alert with <button type="button" class="btn btn-danger">Attack</button> Give it a click if you like.
+</div></div>
+ 	</div>
+</div>
 <script type="text/javascript"  src="assets/javascript/game.js"></script>
+
 </body>
 </html>
