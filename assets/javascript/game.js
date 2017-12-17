@@ -32,7 +32,7 @@ counterAttackPower = Math.floor(Math.random() * (13 - 1) + 1);
 
 ///your character click functions
 
-$(".characters").click(function(){
+$(".characters").one( "click", function(){
   $(".characters1").hide();
   $(".characters2").hide();
   $(".characters3").hide();
@@ -48,7 +48,7 @@ $(".selectdefender3").show();
 
 });
 
-$(".characters1").click(function(){
+$(".characters1").one( "click", function(){
   $(".characters").hide();
   $(".characters2").hide();
   $(".characters3").hide();
@@ -63,7 +63,7 @@ $(".selectdefender3").show();
   lukechar = true;
 
 });
-$(".characters2").click(function(){
+$(".characters2").one( "click", function(){
   $(".characters1").hide();
   $(".characters").hide();
   $(".characters3").hide();
@@ -78,7 +78,7 @@ $(".selectdefender3").show();
   monkeychar = true;
 
 });
-$(".characters3").click(function(){
+$(".characters3").one( "click", function(){
   $(".characters1").hide();
   $(".characters2").hide();
   $(".characters").hide();
