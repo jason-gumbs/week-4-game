@@ -8,6 +8,7 @@ $(".defender2").hide();
 $(".defender3").hide();
 $(".alert").hide();
 $(".list-group").hide();
+$(".select1").hide();
 
 //
 healthPoints: 0;
@@ -40,6 +41,7 @@ $(".characters").click(function(){
 $(".selectdefender2").show();
 $(".selectdefender3").show();
   $(".select").hide();
+  $(".select1").show();
   healthPoints = Math.floor(Math.random() * 250) + 100;
    $(".health").text(healthPoints);
   dinochar = true;
@@ -54,6 +56,7 @@ $(".characters1").click(function(){
 $(".selectdefender2").show();
 $(".selectdefender3").show();
   $(".select").hide();
+  $(".select1").show();
   healthPoints = Math.floor(Math.random() * 250) + 100;
     
      $(".health").text(healthPoints);
@@ -68,6 +71,7 @@ $(".characters2").click(function(){
 $(".selectdefender").show();
 $(".selectdefender3").show();
   $(".select").hide();
+  $(".select1").show();
   healthPoints = Math.floor(Math.random() * 250) + 100;
      
      $(".health").text(healthPoints);
@@ -82,6 +86,7 @@ $(".characters3").click(function(){
 $(".selectdefender2").show();
 $(".selectdefender").show();
   $(".select").hide();
+  $(".select1").show();
   healthPoints = Math.floor(Math.random() *  250) + 100;
   
      $(".health").text(healthPoints);
@@ -97,6 +102,7 @@ $(".selectdefender").click(function(){
     $(".selectdefender").hide();
   $(".defender").show();
   $(".alert").show();
+   $(".select1").hide();
   
    ehealthPoints = Math.floor(Math.random() * 250) + 100;
    $(".ehealth").text(ehealthPoints);
@@ -109,34 +115,37 @@ $(".selectdefender2").click(function(){
   $(".selectdefender2").hide();
     $(".selectdefender").hide();
   $(".defender2").show();
-
+	$(".alert").show();
+	  $(".select1").hide();
    ehealthPoints = Math.floor(Math.random() * 250) + 100;
    $(".ehealth").text(ehealthPoints);
   monkeyenemy = true;
 });
-$(".selectdefender3").click(function(){
-  $(".selectdefender1").hide();
-  $(".selectdefender3").hide();
-  $(".selectdefender2").hide();
-    $(".selectdefender").hide();
-  $(".defender3").show();
-  $(".alert").show();
-  
-    ehealthPoints = Math.floor(Math.random() * 250) + 100;
-   $(".ehealth").text(ehealthPoints);
-   machineenemy = true;
-});
-$(".selectdefender1").click(function(){
-  $(".selectdefender1").hide();
-  $(".selectdefender3").hide();
-  $(".selectdefender2").hide();
-    $(".selectdefender").hide();
-  $(".defender1").show();
-  $(".alert").show();
 
-   ehealthPoints = Math.floor(Math.random() * 250) + 100;
-   $(".ehealth").text(ehealthPoints);
-   lukeenemy = true;
+$(".selectdefender3").click(function(){
+ 	 $(".selectdefender1").hide();
+	  $(".selectdefender3").hide();
+ 	 $(".selectdefender2").hide();
+  	  $(".selectdefender").hide();
+ 	 $(".defender3").show();
+ 	 $(".alert").show();
+ 	   $(".select1").hide();
+ 	 ehealthPoints = Math.floor(Math.random() * 250) + 100;
+  	 $(".ehealth").text(ehealthPoints);
+   	machineenemy = true;
+});
+
+$(".selectdefender1").click(function(){
+ 	 $(".selectdefender1").hide();
+  	$(".selectdefender3").hide();
+  	$(".selectdefender2").hide();
+    $(".selectdefender").hide();
+  	$(".defender1").show();
+ 	 $(".alert").show();
+ 	   $(".select1").hide();
+	 ehealthPoints = Math.floor(Math.random() * 250) + 100;
+ 	  $(".ehealth").text(ehealthPoints);
+   	lukeenemy = true;
 });
 
 
@@ -145,10 +154,19 @@ $(".selectdefender1").click(function(){
    attackPower = Math.floor(Math.random() * (13 - 1) + 1);
    counterAttackPower = Math.floor(Math.random() * (13 - 1) + 1);
   }
-
+   function winner() {
+       if (healthPoints <= 0){
+      $(".health").text("You got your ass whooped");
+      $(".alert").hide();
+}
+ if (ehealthPoints <= 0){
+	$(".ehealth").text("Enemy Defeated");
+	$(".alert").hide();
+}
+  }
 
 //Attack fuction
-
+///dinosaurs fighting syntax
 $(".attack").on("click",function() {
 	if(lukeenemy == dinochar ){
 		$(".list-group").show();
@@ -159,20 +177,131 @@ $(".attack").on("click",function() {
 		ehealthPoints = ehealthPoints - counterAttackPower;
 		$(".counter").text("the enemy counter stike " + counterAttackPower);
 		$(".ehealth").text(ehealthPoints);
-
+		winner();
 		
-	}
-	else if (healthPoints == 0){
-      $(".health").text("You got your ass whooped");}
-    
-});
+
+			}else if(machineenemy == dinochar ){
+			$(".list-group").show();
+			dinosaurAttacker();
+			healthPoints = healthPoints - attackPower;
+			$(".strike").text("yout strike power is " + attackPower);
+			$(".health").text(healthPoints);
+			ehealthPoints = ehealthPoints - counterAttackPower;
+			$(".counter").text("the enemy counter stike " + counterAttackPower);
+			$(".ehealth").text(ehealthPoints);
+			winner();
+			}
+				else if(monkeyenemy == dinochar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}///luke skywalker fighting syntax
+					else if( dinoenemy == lukechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+				else if( monkeyenemy == lukechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+					else if( machineenemy == lukechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				}
+				///MACHINE fighting syntax
+					else if( dinoenemy == machinechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+				else if( monkeyenemy == machinechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+					else if( lukeenemy == machinechar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				}
+				///Monkey fighting syntax
+					else if( dinoenemy == monkeychar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+				else if( machineenemy == monkeychar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				winner();
+				}
+					else if( lukeenemy == monkeychar ){
+				$(".list-group").show();
+				dinosaurAttacker();
+				healthPoints = healthPoints - attackPower;
+				$(".strike").text("yout strike power is " + attackPower);
+				$(".health").text(healthPoints);
+				ehealthPoints = ehealthPoints - counterAttackPower;
+				$(".counter").text("the enemy counter stike " + counterAttackPower);
+				$(".ehealth").text(ehealthPoints);
+				}
+	});
 
 
     
-     if (healthPoints = 0){
-      $(".health").text("You got your ass whooped");
-}
-else if (ehealthPoints = 0){
-	$(".ehealth").text("You Lost");
-}
-else{}
+
